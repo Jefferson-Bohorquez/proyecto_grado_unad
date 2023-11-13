@@ -1,1 +1,12 @@
-etcd.yaml
+#Configuracion de servicio etcd,
+#si se crece en nodos se aplica en cada nodo a ingresar de etcd
+ETCD_NAME=nodo_1
+ETCD_DATA_DIR="/var/lib/etcd/nodo_1"
+ETCD_LISTEN_PEER_URLS="http://10.10.10.2:2380"
+ETCD_LISTEN_CLIENT_URLS="http://10.10.10.2:2379"
+ETCD_INITIAL_ADVERTISE_PEER_URLS="http://10.10.10.2:2380"
+ETCD_INITIAL_CLUSTER="nodo_1=http://10.10.10.2:2380"
+ETCD_INITIAL_CLUSTER_STATE="new"
+ETCD_INITIAL_CLUSTER_TOKEN="etcd-cluster-nodo_1"
+ETCD_ADVERTISE_CLIENT_URLS="http://10.13.0.48:2379"
+ETCD_ENABLE_V2="true"
